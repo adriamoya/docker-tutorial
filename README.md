@@ -310,7 +310,7 @@ docker volume create
 ```
 If we create them from a docker container run command at runtime, and we can create them by specifying in them in the Dockerfile, there's only a few cases where you'd want to create it ahead of time. Any driver options that we want to use the `-o` on. Sometimes, in special cases, you do need to create the Docker volume ahead of time, but usually for your local development purposes, just specifying it in a Dockerfile or at the run command is fine.
 
-#### Bind Mounting
+#### Bind Mount
 
 A bind mounting is basically a mapping of the host file or directory to a container file or directory. In the background, it's basically just having the two locations point to the same physical locations on disk. If there are any files in the container that you map to the host files to, the host files win. It doesn't actually delete the files in the container that it overwrote, becautse it's not really overwriting. Because bind mounts are usually host specific, they need specific data to be on the hard drive of the host in order to work. You have to use them at runtime when you use the `docker container run` command (can't use in Dockerfile).
 
